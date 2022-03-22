@@ -56,6 +56,8 @@ services:
     restart: unless-stopped
     ports:
       - 8088:8088
+    labels:
+      shipyard.route: '/'
     user: *superset-user
     depends_on: *superset-depends-on
     volumes: *superset-volumes
